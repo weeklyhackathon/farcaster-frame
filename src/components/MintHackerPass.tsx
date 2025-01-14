@@ -54,6 +54,7 @@ const MintHackerPass = () => {
     const context = await sdk.context;
     if (!context?.user?.fid) {
       setIsFarcasterFrame(false);
+      window.open("https://warpcast.com", "_blank");
       return;
     }
     console.log("context", context);
