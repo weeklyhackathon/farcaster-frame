@@ -48,8 +48,8 @@ const MintHackerPass = () => {
   useEffect(() => {
     if (tokenBalance && tokenBalance > 0n) {
       setHasNFT(true);
-      handlePreparePassport();
     }
+    handlePreparePassport();
   }, [tokenBalance, address]);
 
   const handlePreparePassport = async () => {
@@ -81,6 +81,7 @@ const MintHackerPass = () => {
         setError("Please connect your wallet first");
         return;
       }
+
       const response = await axios.post(
         "https://farcaster.anky.bot/weeklyhackathon/prepare-passport",
         {
@@ -91,6 +92,7 @@ const MintHackerPass = () => {
       console.log("IIIIN HE123i7821378RE", response.data);
       console.log("response.data", response.data.data);
       if (response.data?.data?.hackerProfile?.imageUrl) {
+        setHasNFT(true);
         console.log("ONE");
         setHackerProfile(response.data?.data?.hackerProfile);
         console.log("hackerProfile", hackerProfile);
@@ -99,7 +101,6 @@ const MintHackerPass = () => {
         console.log("TWO");
         console.log("IN HEREEEEE", response.data.data);
         setPassportImageUrl(response.data.data.preMintData.imageUrl);
-
         if (
           !response.data.data.status.isMinted &&
           response.data.data.status.canMint
@@ -107,7 +108,6 @@ const MintHackerPass = () => {
           setShowModal(true);
         }
       }
-      setShowModal(true);
     } catch (err: any) {
       console.error("Error preparing passport:", err);
       setError(err?.response?.data?.message || "Failed to prepare passport");
@@ -159,7 +159,14 @@ const MintHackerPass = () => {
     )}&embeds[]=${
       passportImageUrl || hackerProfile?.imageUrl
     }&embeds[]=https://weeklyhackathon.com`;
-    window.open(url, "_blank");
+    if (isFarcasterFrame) {
+      sdk.actions.openUrl(url);
+    } else {
+      window.open(
+        "https://warpcast.com/~/frames/launch?domain=weeklyhackathon.com",
+        "_blank"
+      );
+    }
   };
 
   const renderNFTDisplay = () => (

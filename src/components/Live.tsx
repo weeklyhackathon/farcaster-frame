@@ -12,7 +12,8 @@ import {
 } from "stream-chat";
 import LivestreamChat from "./LivestreamChat/LivestreamChat";
 import BuyHackathonButton from "./BuyHackathonButton";
-
+import { Link } from "react-router-dom";
+import { useFarcasterContext } from "../context/FarcasterContext";
 interface TokenValidationResponse {
   success: boolean;
   message: string;
@@ -60,6 +61,8 @@ function Live() {
   );
   const [errors, setErrors] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const { userFarcasterFrameContext } = useFarcasterContext();
+  console.log("userFarcasterFrameContext", userFarcasterFrameContext);
 
   const nativeLogin = async (
     nonce: string,
@@ -217,10 +220,12 @@ function Live() {
   return (
     <AuthKitProvider config={optimismConfig}>
       <div className="flex flex-col items-center justify-center h-screen  mx-auto w-screen">
-        <div className="flex flex-col items-center  md:max-w-[555px] w-full bg-gray-600 h-full">
-          <h1 className="font-mek text-8xl mt-4 text-[#2DFF05]">WE ARE LIVE</h1>
+        <div className="flex flex-col items-center  md:max-w-[555px] w-full bg-black h-full">
+          <h1 className="font-mek text-6xl md:text-8xl mt-4 text-[#2DFF05]">
+            WE ARE LIVE
+          </h1>
           {!isAuthenticated && (
-            <div className="w-full  aspect-video bg-red-200">
+            <div className="w-full border-white border-2 aspect-video bg-red-200">
               <video
                 src="/assets/static.mp4"
                 autoPlay
@@ -249,6 +254,7 @@ function Live() {
               chat)
             </p>
             <BuyHackathonButton />
+            <Link to="/">back</Link>
           </div>
         </div>
       </div>

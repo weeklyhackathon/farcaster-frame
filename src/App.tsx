@@ -88,7 +88,7 @@ const App = () => {
   }, []);
 
   return (
-    <main className="relative w-screen min-h-screen flex items-center justify-center bg-black overflow-x-hidden">
+    <main className="relative w-screen min-h-screen flex  bg-black overflow-x-hidden">
       {/* Marquee header */}
       <div className="absolute top-0 w-full h-6 overflow-hidden bg-[#2DFF05] flex items-center">
         <div className="animate-[slideRight_15s_linear_infinite] whitespace-nowrap text-black font-mek text-xs sm:text-base">
@@ -110,7 +110,7 @@ const App = () => {
         </style>
       </div>
 
-      <div className="flex mt-12 flex-col gap-4 sm:gap-6 items-center justify-center text-center w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-white">
+      <div className="flex mt-2 flex-col gap-4 sm:gap-6 items-center justify-center text-center w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-white">
         <h1 className="font-mek text-4xl sm:text-5xl md:text-7xl">
           $hackathon
         </h1>
