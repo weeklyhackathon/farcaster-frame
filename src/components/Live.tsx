@@ -44,7 +44,7 @@ const chatClient = StreamChat.getInstance(apiKey, {
   timeout: 6000,
 });
 
-function Live() {
+function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
   const {
     name: username,
     setName: setUsername,
@@ -62,7 +62,8 @@ function Live() {
   const [errors, setErrors] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<"chat" | "vote">("chat");
-  const [showTokenModal, setShowTokenModal] = useState(false);
+  // const [showTokenModal, setShowTokenModal] = useState(false);
+  setIsLive(true);
 
   const nativeLogin = async (
     nonce: string,
@@ -273,15 +274,15 @@ function Live() {
               </button>
             </div>
 
-            <div className="absolute top-4 right-4">
+            {/* <div className="absolute top-4 right-4">
               <button
                 onClick={() => setShowTokenModal(true)}
                 className="px-3 py-1 bg-black/80 border border-[#2DFF05] rounded text-[#2DFF05] text-sm hover:bg-[#2DFF05]/20 transition-colors"
               >
                 Token Requirements
               </button>
-            </div>
-
+            </div> */}
+            {/* 
             {showTokenModal && (
               <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
                 <div className="bg-black p-6 rounded-lg border border-[#2DFF05] max-w-md">
@@ -298,7 +299,7 @@ function Live() {
                   </button>
                 </div>
               </div>
-            )}
+            )} */}
 
             <Link to="/" className="text-[#2DFF05]">
               back

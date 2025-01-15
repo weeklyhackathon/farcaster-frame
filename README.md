@@ -1,6 +1,5 @@
-# $HACKATHON farcaster frame
+# $HACKATHON Farcaster Frame
 
-git clone https://github.com/jpfraneto/farcaster-frame.git
-cd farcaster-frame
-npm install
-npm run dev
+Welcome to the $HACKATHON Farcaster Frame project! This is a simple frame that allows you to participate in weekly hackathons through Farcaster.
+
+## Quick Start 🚀

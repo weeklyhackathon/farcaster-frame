@@ -18,11 +18,10 @@ import Live from "./components/Live";
 function Root() {
   console.log("Rendering Root component");
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
+  const [isLive, setIsLive] = useState(false);
 
   useEffect(() => {
-    console.log("Root useEffect triggered, isSDKLoaded:", isSDKLoaded);
     const load = async () => {
-      console.log("Initializing Farcaster SDK");
       sdk.actions.ready();
       await sdk.actions.addFrame();
     };
@@ -35,15 +34,15 @@ function Root() {
   return (
     <React.StrictMode>
       <FarcasterProvider>
-        <Navbar />
+        {!isLive && <Navbar />}
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/week-one" element={<WeekOne />} />
           <Route path="/mint-hacker-pass" element={<MintHackerPass />} />
           <Route path="/game" element={<Game />} />
-          <Route path="/live" element={<Live />} />
+          <Route path="/live" element={<Live setIsLive={setIsLive} />} />
         </Routes>
-        <Footer />
+        {!isLive && <Footer />}
       </FarcasterProvider>
     </React.StrictMode>
   );

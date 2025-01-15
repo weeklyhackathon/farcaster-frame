@@ -110,7 +110,7 @@ const App = () => {
         </style>
       </div>
 
-      <div className="flex mt-2 flex-col gap-4 sm:gap-6 items-center justify-center text-center w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-white">
+      <div className="flex mt-10 flex-col gap-4 sm:gap-6 items-center justify-center text-center w-full max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-white">
         <h1 className="font-mek text-4xl sm:text-5xl md:text-7xl">
           $hackathon
         </h1>
