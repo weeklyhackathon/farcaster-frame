@@ -21,6 +21,7 @@ const MintHackerPass = () => {
   const [error, setError] = useState<string | null>(null);
   const [fid, setFid] = useState<number | null>(null);
   const [hasNFT, setHasNFT] = useState(false);
+  const [alreadyClickedOnce, setAlreadyClickedOnce] = useState(false);
 
   const { address, isConnected } = useAccount();
 
@@ -42,6 +43,7 @@ const MintHackerPass = () => {
     functionName: "balanceOf",
     args: [address],
   }) as { data: bigint | undefined };
+  console.log("tokenBalance", tokenBalance);
 
   useEffect(() => {
     if (tokenBalance && tokenBalance > 0n) {
@@ -54,7 +56,13 @@ const MintHackerPass = () => {
     const context = await sdk.context;
     if (!context?.user?.fid) {
       setIsFarcasterFrame(false);
-      window.open("https://warpcast.com", "_blank");
+      if (alreadyClickedOnce) {
+        window.open(
+          "https://warpcast.com/~/frames/launch?domain=weeklyhackathon.com",
+          "_blank"
+        );
+      }
+      setAlreadyClickedOnce(true);
       return;
     }
     console.log("context", context);
@@ -69,26 +77,40 @@ const MintHackerPass = () => {
       console.log(
         "Sending request to prepare-hackerpas2222s (passport) endpoint..."
       );
+      if (!address) {
+        setError("Please connect your wallet first");
+        return;
+      }
       const response = await axios.post(
         "https://farcaster.anky.bot/weeklyhackathon/prepare-passport",
         {
-          address,
+          address: address as `0x${string}`,
           fid: context.user.fid,
         }
       );
-      console.log("IIIIN HERE", response.data);
+      console.log("IIIIN HE123i7821378RE", response.data);
       console.log("response.data", response.data.data);
       if (response.data?.data?.hackerProfile?.imageUrl) {
+        console.log("ONE");
         setHackerProfile(response.data?.data?.hackerProfile);
         console.log("hackerProfile", hackerProfile);
         setPassportImageUrl(response.data?.data?.hackerProfile?.imageUrl);
       } else {
-        setPassportImageUrl(response.data.passport.image_url);
+        console.log("TWO");
+        console.log("IN HEREEEEE", response.data.data);
+        setPassportImageUrl(response.data.data.preMintData.imageUrl);
+
+        if (
+          !response.data.data.status.isMinted &&
+          response.data.data.status.canMint
+        ) {
+          setShowModal(true);
+        }
       }
       setShowModal(true);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error preparing passport:", err);
-      setError("Failed to prepare passport. Please try again.");
+      setError(err?.response?.data?.message || "Failed to prepare passport");
     } finally {
       setIsLoading(false);
     }
@@ -134,9 +156,9 @@ const MintHackerPass = () => {
   const handleShare = () => {
     const url = `https://warpcast.com/~/compose?text=${encodeURIComponent(
       `[>_] INITIALIZED: $hackathon access granted </>\n\n[█] Week 0x01 Challenge: Build the ultimate Frames v2 starter experience\n\n[⌘] Current pool: $7.2k USD [LIVE/GROWING]\n\n[∞] Ready to hack? Join the revolution - mint your pass in the frame below.`
-    )}&embeds[]=https://weeklyhackathon.com&embeds[]=${
-      hackerProfile?.imageUrl
-    }`;
+    )}&embeds[]=${
+      passportImageUrl || hackerProfile?.imageUrl
+    }&embeds[]=https://weeklyhackathon.com`;
     window.open(url, "_blank");
   };
 

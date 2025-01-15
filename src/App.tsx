@@ -250,6 +250,19 @@ const App = () => {
           >
             Track $hackathon
           </a>
+
+          <Link
+            to="/game"
+            className="w-full sm:w-auto px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mek"
+          >
+            game (experimental)
+          </Link>
+          <Link
+            to="/live"
+            className="w-full sm:w-auto px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mek"
+          >
+            live (experimental)
+          </Link>
         </div>
 
         <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8">
