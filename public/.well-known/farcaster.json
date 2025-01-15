@@ -12,7 +12,7 @@
     "imageUrl": "https://github.com/jpfraneto/images/blob/main/hackathon-banner-.png?raw=true",
     "buttonTitle": "join $hackathon",
     "splashImageUrl": "https://github.com/jpfraneto/images/blob/main/hackathon.png?raw=true",
-    "splashBackgroundColor": "#141413",
+    "splashBackgroundColor": "#141414",
     "webhookUrl": "https://farcaster.anky.bot/weeklyhackathon/framesv2-webhook"
   }
 }

@@ -176,12 +176,7 @@ const MintHackerPass = () => {
         alt="Hacker Pass"
         className="w-full max-w-lg h-auto mb-2 shadow-[0_0_20px_rgba(45,255,5,0.8)] rounded-lg"
       />
-      <p
-        className="text-[#2DFF05] text-sm mb-4"
-        style={{ textShadow: "0 0 10px rgba(45, 255, 5, 0.5)" }}
-      >
-        Save this image to your photo library
-      </p>
+
       <button
         onClick={handleShare}
         className="bg-black text-[#2DFF05] px-8 py-4 rounded font-mono border-2 border-[#2DFF05] hover:bg-[#2DFF05] hover:text-black transition-colors"
@@ -228,12 +223,7 @@ const MintHackerPass = () => {
               onLoad={() => console.log("Image loaded successfully")}
               onError={() => console.error("Error loading image")}
             />
-            <p
-              className="text-[#2DFF05] text-sm mb-4"
-              style={{ textShadow: "0 0 10px rgba(45, 255, 5, 0.5)" }}
-            >
-              Save this image to your photo library
-            </p>
+
             <div className="flex gap-4">
               <button
                 onClick={isConfirmed ? handleShare : mintPassport}

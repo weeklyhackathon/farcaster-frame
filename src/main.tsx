@@ -2,7 +2,7 @@ import "./index.css";
 
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import sdk from "@farcaster/frame-sdk";
 import App from "./App";
 import FarcasterProvider from "./components/providers/EthereumProvider";
@@ -18,7 +18,6 @@ import Live from "./components/Live";
 function Root() {
   console.log("Rendering Root component");
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     console.log("Root useEffect triggered, isSDKLoaded:", isSDKLoaded);
@@ -28,19 +27,15 @@ function Root() {
       await sdk.actions.addFrame();
     };
     if (sdk && !isSDKLoaded) {
-      console.log("Loading SDK...");
       setIsSDKLoaded(true);
       load();
     }
   }, [isSDKLoaded]);
 
-  const isGameRoute = location.pathname.includes("game-");
-  const isLiveRoute = location.pathname.includes("live");
-
   return (
     <React.StrictMode>
       <FarcasterProvider>
-        {!isGameRoute || (!isLiveRoute && <Navbar />)}
+        <Navbar />
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/week-one" element={<WeekOne />} />
@@ -48,7 +43,7 @@ function Root() {
           <Route path="/game" element={<Game />} />
           <Route path="/live" element={<Live />} />
         </Routes>
-        {!isGameRoute || (!isLiveRoute && <Footer />)}
+        <Footer />
       </FarcasterProvider>
     </React.StrictMode>
   );

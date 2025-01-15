@@ -13,7 +13,7 @@ import {
 import LivestreamChat from "./LivestreamChat/LivestreamChat";
 import BuyHackathonButton from "./BuyHackathonButton";
 import { Link } from "react-router-dom";
-import { useFarcasterContext } from "../context/FarcasterContext";
+
 interface TokenValidationResponse {
   success: boolean;
   message: string;
@@ -61,8 +61,8 @@ function Live() {
   );
   const [errors, setErrors] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const { userFarcasterFrameContext } = useFarcasterContext();
-  console.log("userFarcasterFrameContext", userFarcasterFrameContext);
+  const [activeTab, setActiveTab] = useState<"chat" | "vote">("chat");
+  const [showTokenModal, setShowTokenModal] = useState(false);
 
   const nativeLogin = async (
     nonce: string,
@@ -249,12 +249,60 @@ function Live() {
               isAuthenticated={isAuthenticated}
               callback={onFarcasterSignIn}
             />
-            <p className="px-8 text-center mt-2 text-[#2DFF05]">
-              (you need at least 88889 $hackathon on your connected wallet to
-              chat)
-            </p>
-            <BuyHackathonButton />
-            <Link to="/">back</Link>
+
+            <div className="flex w-full max-w-md mt-4 border-b border-[#2DFF05]">
+              <button
+                onClick={() => setActiveTab("chat")}
+                className={`flex-1 py-2 text-center transition-colors ${
+                  activeTab === "chat"
+                    ? "bg-[#2DFF05] text-black"
+                    : "bg-[#1A8C03] text-[#2DFF05]"
+                }`}
+              >
+                Chat
+              </button>
+              <button
+                onClick={() => setActiveTab("vote")}
+                className={`flex-1 py-2 text-center transition-colors ${
+                  activeTab === "vote"
+                    ? "bg-[#2DFF05] text-black"
+                    : "bg-[#1A8C03] text-[#2DFF05]"
+                }`}
+              >
+                Vote
+              </button>
+            </div>
+
+            <div className="absolute top-4 right-4">
+              <button
+                onClick={() => setShowTokenModal(true)}
+                className="px-3 py-1 bg-black/80 border border-[#2DFF05] rounded text-[#2DFF05] text-sm hover:bg-[#2DFF05]/20 transition-colors"
+              >
+                Token Requirements
+              </button>
+            </div>
+
+            {showTokenModal && (
+              <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+                <div className="bg-black p-6 rounded-lg border border-[#2DFF05] max-w-md">
+                  <p className="text-[#2DFF05] text-center">
+                    You need at least 88889 $hackathon on your connected wallet
+                    to chat
+                  </p>
+                  <BuyHackathonButton />
+                  <button
+                    onClick={() => setShowTokenModal(false)}
+                    className="mt-4 w-full px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05]/20 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <Link to="/" className="text-[#2DFF05]">
+              back
+            </Link>
           </div>
         </div>
       </div>

@@ -155,40 +155,6 @@ const App = () => {
             </style>
           </button>
         </div>
-        <p className="text-[#2DFF05]">***********************************</p>
-        <MintHackerPass />
-        <p className="text-[#2DFF05]">***********************************</p>
-
-        <p className="text-lg sm:text-xl md:text-2xl">
-          The first self-sustaining weekly hackathon on Farcaster. Each week,
-          all trading fees from $hackathon are awarded to the builders that will
-          shape the future of decentralized social media.
-        </p>
-
-        <div className="text-lg sm:text-xl md:text-2xl mt-2 sm:mt-4">
-          <span className="font-mek text-[#2DFF05]">How it works:</span>
-          <ul className="mt-2 space-y-2 text-left">
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>
-                Every Thursday at 23:59 UTC, a new challenge is announced
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Build something amazing during the week</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Winner takes all trading fees accumulated that week</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Rinse and repeat - forever</span>
-            </li>
-          </ul>
-        </div>
-
         <div className="font-mek text-xl sm:text-2xl md:text-3xl text-[#2DFF05] mt-4">
           week one:
         </div>
@@ -233,6 +199,37 @@ const App = () => {
             </button>
           </div>
           <div className="text-xs text-[#2DFF05]/70">{lastUpdated}</div>
+        </div>
+        <MintHackerPass />
+
+        <p className="text-lg sm:text-xl md:text-2xl">
+          The first self-sustaining weekly hackathon on Farcaster. Each week,
+          all trading fees from $hackathon are awarded to the builders that will
+          shape the future of decentralized social media.
+        </p>
+
+        <div className="text-lg sm:text-xl md:text-2xl mt-2 sm:mt-4">
+          <span className="font-mek text-[#2DFF05]">How it works:</span>
+          <ul className="mt-2 space-y-2 text-left">
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>
+                Every Thursday at 23:59 UTC, a new challenge is announced
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Build something amazing during the week</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Winner takes all trading fees accumulated that week</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Rinse and repeat - forever</span>
+            </li>
+          </ul>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-6 text-xl sm:text-2xl md:text-3xl justify-center w-full">
