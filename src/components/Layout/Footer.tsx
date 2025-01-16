@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full bg-black bg-opacity-80 backdrop-blur-sm py-2 sm:py-4 px-2 sm:px-4">
+    <footer className="fixed bottom-0 w-full bg-black bg-opacity-80 backdrop-blur-sm py-2 h-16 sm:py-4 px-2 sm:px-4">
       <div className="max-w-7xl mx-auto flex justify-center items-center gap-4 sm:gap-8">
         <a
           href="https://t.me/weeklyhackathon"

@@ -171,6 +171,9 @@ const MintHackerPass = () => {
 
   const renderNFTDisplay = () => (
     <div className="flex flex-col items-center">
+      <p className="mb-4 text-lg sm:text-xl md:text-2xl text-[#2DFF05]">
+        your hacker pass:
+      </p>
       <img
         src={passportImageUrl || ""}
         alt="Hacker Pass"
@@ -179,10 +182,10 @@ const MintHackerPass = () => {
 
       <button
         onClick={handleShare}
-        className="bg-black text-[#2DFF05] px-8 py-4 rounded font-mono border-2 border-[#2DFF05] hover:bg-[#2DFF05] hover:text-black transition-colors"
+        className="bg-black text-[#2DFF05] px-8 mt-8 py-4 rounded font-mono border-2 border-[#2DFF05] hover:bg-[#2DFF05] hover:text-black transition-colors"
         style={{ textShadow: "0 0 10px rgba(45, 255, 5, 0.5)" }}
       >
-        share
+        share on warpcast
       </button>
     </div>
   );

@@ -1,7 +1,10 @@
 import "@farcaster/auth-kit/styles.css";
 import { AuthKitProvider, UseSignInData } from "@farcaster/auth-kit";
 import "stream-chat-react/dist/css/v2/index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
+
+import FramesSDK from "@farcaster/frame-sdk";
 
 import { useStore } from "../store/useStore";
 import MaybeDisplaySignInButton from "./MaybeDisplaySignInButton/MaybeDisplaySignInButton";
@@ -11,8 +14,9 @@ import {
   type Channel as StreamChannel,
 } from "stream-chat";
 import LivestreamChat from "./LivestreamChat/LivestreamChat";
-import BuyHackathonButton from "./BuyHackathonButton";
-import { Link } from "react-router-dom";
+import VoteTab from "./VoteTab";
+
+const API_URL = "https://server.weeklyhackathon.com";
 
 interface TokenValidationResponse {
   success: boolean;
@@ -61,9 +65,42 @@ function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
   );
   const [errors, setErrors] = useState<string | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [activeTab, setActiveTab] = useState<"chat" | "vote">("chat");
-  // const [showTokenModal, setShowTokenModal] = useState(false);
+  const [showVoteModal, setShowVoteModal] = useState(false);
+  const [countdown, setCountdown] = useState<string>("");
   setIsLive(true);
+
+  type FrameContext = Awaited<typeof FramesSDK.context>;
+
+  const [frameContext, setFrameContext] = useState<FrameContext | null>(null);
+
+  FramesSDK.actions
+    .ready()
+    .then(() => FramesSDK.context.then(setFrameContext).catch(() => {}));
+
+  useEffect(() => {
+    if (frameContext) {
+      console.log("Frame context: ", frameContext);
+    }
+  }, [frameContext]);
+
+  useEffect(() => {
+    const targetDate = new Date("2025-01-17T00:29:00Z");
+
+    const timer = setInterval(() => {
+      const now = new Date();
+      const diff = targetDate.getTime() - now.getTime();
+
+      const hours = Math.floor(
+        (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      setCountdown(`${hours}h ${minutes}m ${seconds}s`);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const nativeLogin = async (
     nonce: string,
@@ -72,7 +109,7 @@ function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
     fid: number,
     username: string
   ) => {
-    const response = await fetch("/api/login", {
+    const response = await fetch(`${API_URL}/api/login`, {
       method: "POST",
       body: JSON.stringify({
         fid,
@@ -101,7 +138,7 @@ function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
   };
 
   const isJwtValid = async (jwt: string) => {
-    const response = await fetch("/api/revalidate", {
+    const response = await fetch(`${API_URL}/api/revalidate`, {
       method: "POST",
       body: JSON.stringify({ jwt }),
       headers: {
@@ -220,91 +257,62 @@ function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
 
   return (
     <AuthKitProvider config={optimismConfig}>
-      <div className="flex flex-col items-center justify-center h-screen  mx-auto w-screen">
-        <div className="flex flex-col items-center  md:max-w-[555px] w-full bg-black h-full">
-          <h1 className="font-mek text-6xl md:text-8xl mt-4 text-[#2DFF05]">
-            WE ARE LIVE
+      <div className="flex flex-col items-center justify-center h-screen mx-auto w-screen">
+        <div className="flex flex-col items-center md:max-w-[555px] w-full bg-black h-full">
+          <h1 className="w-fit ml-auto font-mek text-6xl md:text-8xl mt-4 text-[#2DFF05]">
+            {countdown}
           </h1>
-          {!isAuthenticated && (
-            <div className="w-full border-white border-2 aspect-video bg-red-200">
-              <video
-                src="/assets/static.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full "
-              />
+          <div className="w-full border-white border-2 aspect-video bg-red-200">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/h96MGcsi7GQ?si=FMd3Vmfayzsub8bh"
+              title="YouTube video player"
+            ></iframe>
+          </div>
+          {errors && <p className="error">{errors}</p>}
+
+          <div className="w-full h-full">
+            {isAuthenticated ? (
+              <div className="w-full h-96 bg-[#2A2A2A] rounded-b-lg shadow-lg">
+                <LivestreamChat
+                  channel={channel}
+                  displayName={displayName}
+                  username={username}
+                />
+              </div>
+            ) : (
+              <div className="w-full h-full bg-[#2A2A2A] p-4 rounded-b-lg text-white text-center flex justify-center items-center">
+                <MaybeDisplaySignInButton
+                  frameContext={frameContext}
+                  jwt={jwt}
+                  isAuthenticated={isAuthenticated}
+                  onFarcasterSignIn={onFarcasterSignIn}
+                />
+              </div>
+            )}
+          </div>
+
+          {/* Floating Vote Button */}
+          <button
+            onClick={() => setShowVoteModal(!showVoteModal)}
+            className={`fixed top-4 left-4 border-2 border-[#2DFF05] text-4xl p-4 rounded-full shadow-lg transition-all duration-300 z-[60] ${
+              showVoteModal
+                ? "bg-[#2DFF05] rotate-12 scale-110 shadow-[#2DFF05]/50 shadow-xl"
+                : "bg-black hover:bg-[#25CC04]"
+            }`}
+          >
+            🗳️
+          </button>
+
+          {/* Vote Modal */}
+          {showVoteModal && (
+            <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex h-screen items-center justify-center transition-all duration-300 animate-fadeIn">
+              <div className="w-full h-full max-w-3xl relative rounded-lg shadow-2xl transform animate-scaleIn">
+                <VoteTab />
+              </div>
             </div>
           )}
-          {errors && <p className="error">{errors}</p>}
-          {pfp && <img src={pfp} alt="Profile picture" />}
-          <LivestreamChat
-            channel={channel}
-            displayName={displayName}
-            username={username}
-          />
-          <div className="w-full mt-4 mx-auto  flex flex-col justify-center items-center">
-            <MaybeDisplaySignInButton
-              jwt={jwt}
-              isAuthenticated={isAuthenticated}
-              callback={onFarcasterSignIn}
-            />
-
-            <div className="flex w-full max-w-md mt-4 border-b border-[#2DFF05]">
-              <button
-                onClick={() => setActiveTab("chat")}
-                className={`flex-1 py-2 text-center transition-colors ${
-                  activeTab === "chat"
-                    ? "bg-[#2DFF05] text-black"
-                    : "bg-[#1A8C03] text-[#2DFF05]"
-                }`}
-              >
-                Chat
-              </button>
-              <button
-                onClick={() => setActiveTab("vote")}
-                className={`flex-1 py-2 text-center transition-colors ${
-                  activeTab === "vote"
-                    ? "bg-[#2DFF05] text-black"
-                    : "bg-[#1A8C03] text-[#2DFF05]"
-                }`}
-              >
-                Vote
-              </button>
-            </div>
-
-            {/* <div className="absolute top-4 right-4">
-              <button
-                onClick={() => setShowTokenModal(true)}
-                className="px-3 py-1 bg-black/80 border border-[#2DFF05] rounded text-[#2DFF05] text-sm hover:bg-[#2DFF05]/20 transition-colors"
-              >
-                Token Requirements
-              </button>
-            </div> */}
-            {/* 
-            {showTokenModal && (
-              <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-                <div className="bg-black p-6 rounded-lg border border-[#2DFF05] max-w-md">
-                  <p className="text-[#2DFF05] text-center">
-                    You need at least 88889 $hackathon on your connected wallet
-                    to chat
-                  </p>
-                  <BuyHackathonButton />
-                  <button
-                    onClick={() => setShowTokenModal(false)}
-                    className="mt-4 w-full px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05]/20 transition-colors"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )} */}
-
-            <Link to="/" className="text-[#2DFF05]">
-              back
-            </Link>
-          </div>
         </div>
       </div>
     </AuthKitProvider>

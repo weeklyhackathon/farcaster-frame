@@ -1,4 +1,12 @@
-import { Chat, Channel, MessageList, MessageInput } from "stream-chat-react";
+import {
+  Chat,
+  Channel,
+  MessageList,
+  MessageInput,
+  defaultRenderMessages,
+  MessageRenderer,
+  DefaultStreamChatGenerics,
+} from "stream-chat-react";
 import { type Channel as StreamChannel } from "stream-chat";
 
 const LivestreamChat = ({
@@ -17,12 +25,22 @@ const LivestreamChat = ({
     return null;
   }
 
+  const customRenderMessages: MessageRenderer<DefaultStreamChatGenerics> = (
+    options
+  ) => {
+    console.log("options", options);
+    const elements = defaultRenderMessages(options);
+    console.log("elements", elements);
+    elements.push(<li key="caught-up">You're all caught up!</li>);
+    console.log("elements", elements);
+    return elements;
+  };
+
   return (
-    <Chat client={channel.getClient()}>
-      <h4>{displayName || username}</h4>
+    <Chat client={channel.getClient()} theme="str-chat__theme-dark">
       <Channel channel={channel}>
         <div className="chat-mangler">
-          <MessageList />
+          <MessageList renderMessages={customRenderMessages} />
           <MessageInput />
         </div>
       </Channel>

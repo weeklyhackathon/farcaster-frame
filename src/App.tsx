@@ -72,14 +72,13 @@ const App = () => {
       const now = new Date();
       const diff = endDate.getTime() - now.getTime();
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
         (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+      setCountdown(`${hours}h ${minutes}m ${seconds}s`);
     };
 
     const interval = setInterval(updateCountdown, 1000);
@@ -134,7 +133,7 @@ const App = () => {
             className="w-full bg-black px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mono text-xs sm:text-sm md:text-base break-all relative"
           >
             <span id="ca-text" className="transition-all duration-300">
-              0x3dF58A5737130FdC180D360dDd3EFBa34e5801cb
+              CA: 0x3dF58A5737130FdC180D360dDd3EFBa34e5801cb
             </span>
             <div
               id="copy-notification"
@@ -155,7 +154,7 @@ const App = () => {
             </style>
           </button>
         </div>
-        <div className="font-mek text-xl sm:text-2xl md:text-3xl text-[#2DFF05] mt-4">
+        <div className="font-mek text-xl sm:text-2xl md:text-3xl text-[#2DFF05] ">
           week one:
         </div>
 
@@ -174,29 +173,6 @@ const App = () => {
               )}{" "}
               USD
             </div>
-            <button
-              onClick={fetchPrizePool}
-              className="relative z-10 p-2 border border-[#2DFF05] rounded hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors"
-              aria-label="Refresh prize pool"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-[#2DFF05]"
-              >
-                <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-                <path d="M3 3v5h5"></path>
-                <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
-                <path d="M16 21h5v-5"></path>
-              </svg>
-            </button>
           </div>
           <div className="text-xs text-[#2DFF05]/70">{lastUpdated}</div>
         </div>
@@ -239,21 +215,7 @@ const App = () => {
           >
             Week One's Challenge
           </Link>
-          <a
-            href="https://dexscreener.com/base/0x3dF58A5737130FdC180D360dDd3EFBa34e5801cb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mek"
-          >
-            Track $hackathon
-          </a>
 
-          <Link
-            to="/game"
-            className="w-full sm:w-auto px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mek"
-          >
-            game (experimental)
-          </Link>
           <Link
             to="/live"
             className="w-full sm:w-auto px-4 py-2 border border-[#2DFF05] rounded text-[#2DFF05] hover:bg-[#2DFF05] hover:bg-opacity-20 transition-colors font-mek"
