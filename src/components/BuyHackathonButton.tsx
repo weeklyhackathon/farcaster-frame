@@ -6,7 +6,7 @@ import {
 } from "wagmi";
 import clanker_v2_abi from "../lib/clanker_v2_abi.json";
 
-const HACKATHON_TOKEN_CONTRACT_ADDRESS =
+export const HACKATHON_TOKEN_CONTRACT_ADDRESS =
   "0x3dF58A5737130FdC180D360dDd3EFBa34e5801cb";
 
 const BuyHackathonButton = () => {
