@@ -80,7 +80,10 @@ function Live({ setIsLive }: { setIsLive: (isLive: boolean) => void }) {
     typeof FramesSDK.context
   > | null>(null);
 
-  const { weekOneFinalists } = useFarcaster();
+  const { weekOneFinalists: unsortedWeekOneFinalists } = useFarcaster();
+  const weekOneFinalists = [...unsortedWeekOneFinalists].sort(
+    (a, b) => a.draggablePosition - b.draggablePosition
+  );
 
   setIsLive(true);
 
