@@ -1,0 +1,828 @@
+{
+  "99": {
+    "wallets": ["0x849151d7D0bF1F34b70d5caD5149D28CC2308bf1"],
+    "balance": 192981517,
+    "username": "jessepollak"
+  },
+  "158": {
+    "wallets": [
+      "0xB4e60388BB1fbabdF77dFf2337Ad2fCB596d500A",
+      "0xC4e5C0B5577AE5c3A82830508cF38Fd21219E1C4"
+    ],
+    "balance": 227204,
+    "username": "breck"
+  },
+  "409": {
+    "wallets": ["0x61a36C36d95cD9e2b166556B4c858Fe1DDcCeBCc"],
+    "balance": 27068678,
+    "username": "div"
+  },
+  "451": {
+    "wallets": ["0x8A95d5F9Ac0EebD5880199eA8FCD0FaE845bBBF2"],
+    "balance": 100720334,
+    "username": "pfista"
+  },
+  "539": {
+    "wallets": ["0xe978bDBC3347feB6ED10c9845BBDc298604F80ca"],
+    "balance": 545631946,
+    "username": "ace"
+  },
+  "1255": {
+    "wallets": ["0x841AD0AbAb2D33520ca236A2F5D8b038adDc12BA"],
+    "balance": 17638372,
+    "username": "cardenas"
+  },
+  "1430": {
+    "wallets": ["0xF4844a06d4f995C4c03195AfcB5Aa59dCBB5b4Fc"],
+    "balance": 113743950,
+    "username": "wijuwiju.eth"
+  },
+  "1702": {
+    "wallets": ["0x09356AED1457D6EbB6cF6ad864Ea318Dcb815683"],
+    "balance": 379834,
+    "username": "leal"
+  },
+  "2201": {
+    "wallets": ["0x662d5d79849113A5403Af776210307a7c82a5267"],
+    "balance": 30101783,
+    "username": "carlos"
+  },
+  "2211": {
+    "wallets": ["0x0de290F9717764641B9694C246338A477Cff9543"],
+    "balance": 569936,
+    "username": "commstark"
+  },
+  "2615": {
+    "wallets": ["0x55b9cdEd57cE91e56970dba48D367fC17fA528eC"],
+    "balance": 33672328,
+    "username": "hypercatcher"
+  },
+  "2736": {
+    "wallets": ["0x7e07064E5A921A57Eb29C22F179B20513e8a3485"],
+    "balance": 10374214,
+    "username": "annoushka.eth"
+  },
+  "4479": {
+    "wallets": ["0x628BC212b0350744E4A29D9aABB8B7A1Cf6fAAaa"],
+    "balance": 15094215,
+    "username": "jj"
+  },
+  "4816": {
+    "wallets": ["0x31058251e0a29f3DFB24919F4Db37c67A40c1419"],
+    "balance": 681735692,
+    "username": "cartographer"
+  },
+  "5254": {
+    "wallets": ["0x55A5705453Ee82c742274154136Fce8149597058"],
+    "balance": 94665463,
+    "username": "papa"
+  },
+  "5644": {
+    "wallets": ["0xE41f56122d44f63c4492096d54D8BE96d600bB06"],
+    "balance": 40560615,
+    "username": "ebeezy.eth"
+  },
+  "5698": {
+    "wallets": ["0x5853bCAC824fc455C1e448706419633EFc452bC8"],
+    "balance": 696969,
+    "username": "0xcaso"
+  },
+  "6158": {
+    "wallets": ["0xd03b8dF12652781155Df296d56E7b50DEf08B1F0"],
+    "balance": 26409158,
+    "username": "laeght"
+  },
+  "6861": {
+    "wallets": ["0x9054E37Eac6D11791caF5b3a4fd9ec4Bc1B4dfD8"],
+    "balance": 3200185,
+    "username": "boredhead"
+  },
+  "7942": {
+    "wallets": ["0xf4408b493df70a9857DFe8DAef5f4cCe4999A761"],
+    "balance": 4204204,
+    "username": "lobzztr"
+  },
+  "8207": {
+    "wallets": ["0x4501457c36aE0647Cd43a1a81EA4e9E69604215f"],
+    "balance": 3226321,
+    "username": "kohta"
+  },
+  "9230": {
+    "wallets": ["0xd37b1eA54A39256Bd1E97f65f8e9c996F3C6f430"],
+    "balance": 177316175,
+    "username": "gamemeister.eth"
+  },
+  "9702": {
+    "wallets": ["0x9134fc7112b478e97eE6F0E6A7bf81EcAfef19ED"],
+    "balance": 5629291,
+    "username": "jrh3k5.eth"
+  },
+  "10178": {
+    "wallets": ["0xFd37f4625CA5816157D55a5b3F7Dd8DD5F8a0C2F"],
+    "balance": 35245609,
+    "username": "owl"
+  },
+  "11037": {
+    "wallets": ["0x0ea26051F7657d59418da186137141CeA90D0652"],
+    "balance": 80950105,
+    "username": "wasabi"
+  },
+  "11280": {
+    "wallets": ["0x704Cc226D514FB5CEB64afb60c7fb832672BD81e"],
+    "balance": 2000000,
+    "username": "bert"
+  },
+  "11528": {
+    "wallets": ["0x10676738Db9601C5AF144A17C3A48C8eBDA7E353"],
+    "balance": 458839287,
+    "username": "jrf"
+  },
+  "12509": {
+    "wallets": ["0xc7261Ad2a066c4303F8Ce8Ee0203E1A452aeAc30"],
+    "balance": 392310688,
+    "username": "0xsec"
+  },
+  "12920": {
+    "wallets": ["0xC0e7971d777410C0f8904Bc78418d2597303A5Af"],
+    "balance": 1276748,
+    "username": "xemniz"
+  },
+  "13505": {
+    "wallets": ["0xA9fD03e154e1B3Cbe88F1b515E7EbDAb2d640b60"],
+    "balance": 88888888,
+    "username": "jvaleska.eth"
+  },
+  "13596": {
+    "wallets": ["0x6d9fFaede2c6CD9bb48becE230ad589e0E0D981c"],
+    "balance": 2656309,
+    "username": "hellno.eth"
+  },
+  "15469": {
+    "wallets": ["0x545425F9686B56078Da3bFac5f9f25bB287b1291"],
+    "balance": 5216894,
+    "username": "farzin"
+  },
+  "15732": {
+    "wallets": ["0x4133c79E575591b6c380c233FFFB47a13348DE86"],
+    "balance": 3493717606,
+    "username": "kompreni"
+  },
+  "15775": {
+    "wallets": ["0xc853033F3502A206053814542ff1dcFac7aa29E5"],
+    "balance": 140728505,
+    "username": "christ360"
+  },
+  "15937": {
+    "wallets": ["0x64daA230D4701b3E601f3F8278fA8071D3bd878e"],
+    "balance": 31295155,
+    "username": "shimmyya"
+  },
+  "16098": {
+    "wallets": ["0xed21735DC192dC4eeAFd71b4Dc023bC53fE4DF15"],
+    "balance": 124229,
+    "username": "jpfraneto.eth"
+  },
+  "16512": {
+    "wallets": ["0x37e6072596a35B623e949690dE49430706ADD855"],
+    "balance": 240392178,
+    "username": "0xbamboostrong"
+  },
+  "16948": {
+    "wallets": ["0xb29006bB01F23fffC36b0dfc5c5b7D23e57cE729"],
+    "balance": 3169144,
+    "username": "seaflagcrypto"
+  },
+  "17616": {
+    "wallets": ["0x9875094945893d40979E2858B6cAf788dcCE3368"],
+    "balance": 281030856,
+    "username": "nationalbank"
+  },
+  "18384": {
+    "wallets": ["0x103Ac82DAf13Da683F6251DC0c5008198Fb2A402"],
+    "balance": 47645862,
+    "username": "daikie"
+  },
+  "18723": {
+    "wallets": ["0xDbee1Cfa10D706ef868dd2dFF97246Cb6d73B530"],
+    "balance": 241214453,
+    "username": "brixbounty"
+  },
+  "18763": {
+    "wallets": ["0x1D2E44dede73dcF080104eC0839A70DA14641762"],
+    "balance": 127265014,
+    "username": "runn3rr"
+  },
+  "19032": {
+    "wallets": ["0x76c2065dEE3180d1CCA91A965AB137c25CF74ea4"],
+    "balance": 1045193,
+    "username": "toffix"
+  },
+  "19742": {
+    "wallets": ["0x6033Ee7C2130Cf07C56f9BA07ECd72bb5e1D224e"],
+    "balance": 100000,
+    "username": "saluberis"
+  },
+  "23115": {
+    "wallets": ["0xabE8886B6F8Dc7FFFed07C47680FfFC45eBd8ed1"],
+    "balance": 181940169,
+    "username": "solitude"
+  },
+  "188953": {
+    "wallets": ["0xC34aE1A39662415a4720d4A3e7C2Be0E202568C2"],
+    "balance": 5818954,
+    "username": "!188953"
+  },
+  "189113": {
+    "wallets": ["0xF378Bc06E8a1CC7c26bB27e6F81b84802198F4ac"],
+    "balance": 91450335,
+    "username": "nghia"
+  },
+  "193636": {
+    "wallets": ["0x7B720Ff4C698aDA0c8fcE2086C98b7E5c1ea0D80"],
+    "balance": 95425740,
+    "username": "0xlau"
+  },
+  "194372": {
+    "wallets": ["0x4a91F2Bf3aDE1965F979779d78074Ab4F6F93795"],
+    "balance": 6320701,
+    "username": "roadu"
+  },
+  "196290": {
+    "wallets": ["0x2Ab0475881Fe1ae4CE17D484507d96E3240e0260"],
+    "balance": 62885783,
+    "username": "thoughtspace"
+  },
+  "196957": {
+    "wallets": ["0xbAba775A0400A5E442335CEaa4820eDb1DeD8f73"],
+    "balance": 27262650,
+    "username": "baseddesigner.eth"
+  },
+  "198783": {
+    "wallets": ["0x2C9A77cD8DE055fFDbe8721431A7Dd5064A480b0"],
+    "balance": 22867363,
+    "username": "hammallama.eth"
+  },
+  "203751": {
+    "wallets": ["0x5df0f96c5DE9F03d5d1678656dA0B4b5B0647cE1"],
+    "balance": 599685531,
+    "username": "thosmur"
+  },
+  "210962": {
+    "wallets": ["0x63434F2646F69e592c02eEdBd2Af6E9e08293711"],
+    "balance": 22372435,
+    "username": "satoshipe"
+  },
+  "211121": {
+    "wallets": ["0xf4962a35d77C1ddE95C043D58Dd4A0FAFcBf0362"],
+    "balance": 5835570,
+    "username": "ibadarudinni"
+  },
+  "211160": {
+    "wallets": ["0xe7EddaA6bd37849a8A39CD963b1da137032C9146"],
+    "balance": 8235420,
+    "username": "beatle"
+  },
+  "211809": {
+    "wallets": ["0xf4c6A5df9050b15A21aABccbC84cCB31fBdc0846"],
+    "balance": 9415329,
+    "username": "thewestwood.eth"
+  },
+  "213310": {
+    "wallets": ["0x7385E1A824A405cBB13B64829BF1509cd2A471f7"],
+    "balance": 1000000,
+    "username": "schmidtiest.eth"
+  },
+  "216519": {
+    "wallets": ["0x7C91D7Fc5E7fF58E97960341a9b4b28d6354919d"],
+    "balance": 23792178,
+    "username": "the-global-soul"
+  },
+  "217742": {
+    "wallets": ["0xc0B14faB1b32571Bcd19B3c7dD6728c7b764deFB"],
+    "balance": 35121078,
+    "username": "!217742"
+  },
+  "226095": {
+    "wallets": ["0xC3057B4F07e20CAaeF063075D05344C9a9E0452e"],
+    "balance": 2784231,
+    "username": "feast2024"
+  },
+  "226678": {
+    "wallets": ["0x0dA62d394CDF09986e43a8C6C3B6125C51D903CD"],
+    "balance": 320051176,
+    "username": "freeradical"
+  },
+  "238564": {
+    "wallets": ["0xc2F82A1F287B5b5AEBff7C19e83e0a16Cf3bD041"],
+    "balance": 117399948,
+    "username": "niftytime.eth"
+  },
+  "238774": {
+    "wallets": ["0xcB5c2f378860437fad512c3AEC09efcE1C470283"],
+    "balance": 326583836,
+    "username": "freeee"
+  },
+  "238814": {
+    "wallets": ["0x4Dfb9a61b683A8e4F07b7834fD3610F215aa902f"],
+    "balance": 376453,
+    "username": "sardius"
+  },
+  "243154": {
+    "wallets": ["0xf21ae414c02E02321258A31fa41CFf6A7DC1C36F"],
+    "balance": 3172501,
+    "username": "kamacxntrxl"
+  },
+  "244310": {
+    "wallets": ["0xd42BA95C2676340ffa2AcD51456346e0f21DbeDb"],
+    "balance": 800000,
+    "username": "adeolamm"
+  },
+  "244629": {
+    "wallets": ["0x84697cE7ff7782bdFAb734A36A5d665b75fd1c36"],
+    "balance": 6515270,
+    "username": "biggestemmy"
+  },
+  "244914": {
+    "wallets": ["0xDdD5d97e6442e0A5372841b41421d90ffE712Ca2"],
+    "balance": 20000000,
+    "username": "raddave"
+  },
+  "247765": {
+    "wallets": ["0x07c9856e6d0cdA3b7d76d2954b61d5462c7CC2c3"],
+    "balance": 88888,
+    "username": "moon.eth"
+  },
+  "251740": {
+    "wallets": ["0xC941fE4c308308Ed206Dbe8ac19c7d55734f815A"],
+    "balance": 2129853,
+    "username": "asiwaju"
+  },
+  "253127": {
+    "wallets": ["0xE9DaDd9deD105D67e6CB7aaDC48bE0c2d45df652"],
+    "balance": 32375180,
+    "username": "bleu.eth"
+  },
+  "253540": {
+    "wallets": ["0xe37249197a143F91FA4C147732d13F9D16e26f73"],
+    "balance": 338556,
+    "username": "kmayor"
+  },
+  "263844": {
+    "wallets": ["0x134CA4fee2a9B53007e1cDc811c8c06Fa05cf4dD"],
+    "balance": 94460822,
+    "username": "bankdontclose"
+  },
+  "265288": {
+    "wallets": ["0x40dE71B822c0BD37B8ca69a68Dd63097315A1764"],
+    "balance": 136702,
+    "username": "jsk20005"
+  },
+  "266299": {
+    "wallets": ["0xf4D49945511eadda7b500B87Fdb642a8117625a9"],
+    "balance": 169222337,
+    "username": "itbullet"
+  },
+  "268438": {
+    "wallets": ["0x21808EE320eDF64c019A6bb0F7E4bFB3d62F06Ec"],
+    "balance": 100000,
+    "username": "cashlessman.eth"
+  },
+  "271891": {
+    "wallets": ["0xc0007d6dcd1e5d8517409a4c61F278c6798807C8"],
+    "balance": 26355186,
+    "username": "mrmeerkat"
+  },
+  "273639": {
+    "wallets": ["0x14DC118bAED51e9b309e65f4146E1f74F646C0d4"],
+    "balance": 779689624,
+    "username": "0xmaple"
+  },
+  "275020": {
+    "wallets": ["0x3322D87B299cF9B6f17b90adA3411416447c5199"],
+    "balance": 869299,
+    "username": "olamus5"
+  },
+  "278543": {
+    "wallets": ["0xb29936E5642dD13e19db32DeA81ae0ecb950a7bC"],
+    "balance": 307005,
+    "username": "lucasleo"
+  },
+  "280603": {
+    "wallets": ["0x051e7e222A283AEe196e2c22FAD93274c6c512aE"],
+    "balance": 1155671,
+    "username": "abbeyunique"
+  },
+  "285856": {
+    "wallets": ["0xcF302cEBdE84948d5752e25CeC50D6453329FB4B"],
+    "balance": 1677883946,
+    "username": "dfire.eth"
+  },
+  "287193": {
+    "wallets": ["0x8e5D2f8A445dD6812e907BCB0fB4633656BcB8cd"],
+    "balance": 37886404,
+    "username": "abhishekbansal"
+  },
+  "289185": {
+    "wallets": ["0xCD1420E9D1b628Dd11cB143E1e63AAF1414F0c10"],
+    "balance": 10628224,
+    "username": "kolush"
+  },
+  "293039": {
+    "wallets": ["0x2E2396c94C68E99958982371Aa4fB2d642D13c19"],
+    "balance": 1000000,
+    "username": "domodomo"
+  },
+  "294710": {
+    "wallets": ["0xac83350F30936a1dc80E208dCDcdBbB26862A9F0"],
+    "balance": 3002596,
+    "username": "aleddin"
+  },
+  "301989": {
+    "wallets": ["0xf33d9F9E7621842dB67D61fF5008BE996370BA77"],
+    "balance": 36751790,
+    "username": "caxap"
+  },
+  "308119": {
+    "wallets": ["0x885E6aEAc396E26Cc9D2Ab27C1C6c553Ba348b04"],
+    "balance": 138869,
+    "username": "kakac"
+  },
+  "320981": {
+    "wallets": ["0x2f8f3fb734eD219A48c78Ac186aeCD50A356aB4b"],
+    "balance": 7004730,
+    "username": "teledamage"
+  },
+  "323208": {
+    "wallets": ["0x4b1eC19BeaC9c7542D0055A1527C3Bb9C276ecd2"],
+    "balance": 29903371,
+    "username": "cryptoswager"
+  },
+  "324034": {
+    "wallets": ["0x065eFb8cbD9669648f4d765b6D25304F66419C47"],
+    "balance": 872133,
+    "username": "lopam.eth"
+  },
+  "324395": {
+    "wallets": ["0x9E866CCA73e7c7A18c42457B25caA45d8D10aA5C"],
+    "balance": 256752121,
+    "username": "cryptobrye"
+  },
+  "330198": {
+    "wallets": ["0x250a2590389102d58Ae91256ca431399a273Bceb"],
+    "balance": 36209649,
+    "username": "ansenkim.eth"
+  },
+  "331808": {
+    "wallets": ["0x5e42B62599119FEd466B0c41E2Ae14be127C3359"],
+    "balance": 477670,
+    "username": "mikka"
+  },
+  "336481": {
+    "wallets": ["0x111fa8b271E7138307a1F9776Ce710859cdA01cC"],
+    "balance": 23955966,
+    "username": "ergintrz"
+  },
+  "338820": {
+    "wallets": ["0xBD0546C5C8F3A56e807715C0823c30C9F2EBF28c"],
+    "balance": 3942170,
+    "username": "shah1135.eth"
+  },
+  "340646": {
+    "wallets": ["0xE223cE21bA8E8E3784469fFFbF501CBfcF2b992a"],
+    "balance": 12728324,
+    "username": "alexdv"
+  },
+  "342001": {
+    "wallets": ["0x26F0dC6c86A04A12cfdfc1b71cfF0c70533eF6DA"],
+    "balance": 98069399,
+    "username": "gtr4des"
+  },
+  "343414": {
+    "wallets": ["0xdBA8BD8CDa8b86C679425E49C9C54b0A45a8E466"],
+    "balance": 500000000,
+    "username": "mollylean"
+  },
+  "345853": {
+    "wallets": ["0x8E906ee36aDa883CBCFabe53f4b33dc5db4eAaf6"],
+    "balance": 36537550,
+    "username": "27honey"
+  },
+  "349816": {
+    "wallets": ["0xe42508cfb3E4EAADFD398d8FF613406B0E7B4b8A"],
+    "balance": 24431202,
+    "username": "maie"
+  },
+  "351252": {
+    "wallets": ["0xee25b82f176135F996bd91Cf7C1f5AD6e2DC7740"],
+    "balance": 78017446,
+    "username": "duykhanh99"
+  },
+  "354393": {
+    "wallets": ["0x5E5CA521193bd24Fb3124A419a3dca6D780F7A3e"],
+    "balance": 3763392,
+    "username": "aliami"
+  },
+  "372590": {
+    "wallets": ["0x8fa84759562491B2b92fA649971a236054f5C413"],
+    "balance": 140525417,
+    "username": "0xquizy"
+  },
+  "378176": {
+    "wallets": ["0x598C91d70e16177defB34CbA95C2f80F551A4ccB"],
+    "balance": 5397576,
+    "username": "nfthreat.eth"
+  },
+  "380073": {
+    "wallets": ["0x164e361d1c7662C34fFA494d09eCc0490d670BEA"],
+    "balance": 775368,
+    "username": "sammydarealwap"
+  },
+  "389207": {
+    "wallets": ["0x3BA804F7BA06fCbB1f0795359EbF6bA5144bF252"],
+    "balance": 6227644,
+    "username": "outcaster.eth"
+  },
+  "389658": {
+    "wallets": ["0x2BABfeC5bb71cDB94d746e64D03cc399F48D274c"],
+    "balance": 843622,
+    "username": "orchid7"
+  },
+  "391061": {
+    "wallets": ["0xAD7c0D17B856FD6A3eA7863ac73421972C8A06b3"],
+    "balance": 134828301,
+    "username": "zts"
+  },
+  "397627": {
+    "wallets": ["0x2F30998C61b21179aA237f77Fd578Ba8679eB43D"],
+    "balance": 22377302,
+    "username": "elcryptofounder"
+  },
+  "402019": {
+    "wallets": ["0x5382a39e4BF36d123D4844520c15d9F6D7364a79"],
+    "balance": 106179220,
+    "username": "xiak"
+  },
+  "407932": {
+    "wallets": ["0x64b61e3b8F1d5cb92641c92A447b2BB43972450D"],
+    "balance": 162820464,
+    "username": "nicocapital"
+  },
+  "408565": {
+    "wallets": ["0xA7e7c2de88Ca6d805aEC3e28B90727125533EF14"],
+    "balance": 1149377,
+    "username": "joekyoto"
+  },
+  "409622": {
+    "wallets": ["0x01C4BDD595A9b57D339cCB634374Dad167aeaeE4"],
+    "balance": 230367,
+    "username": "olas01"
+  },
+  "410781": {
+    "wallets": ["0x657143820Ee59B5F0Da0de12BD199674178777cD"],
+    "balance": 2238643056,
+    "username": "ionspired"
+  },
+  "414708": {
+    "wallets": ["0x58085DdC6050825495060735B8a41999150879E2"],
+    "balance": 5000000,
+    "username": "jemboods.eth"
+  },
+  "416239": {
+    "wallets": ["0xC6563c29f364F7E661FE112A02caA987F87B956f"],
+    "balance": 187113426,
+    "username": "vitr88"
+  },
+  "417554": {
+    "wallets": ["0x9cfB17B4179ff9B23375F28cFb6CE4230FB1bDa3"],
+    "balance": 59227952,
+    "username": "rezaisgoat.eth"
+  },
+  "419896": {
+    "wallets": ["0xEa7185e7d14FEadA97c05F9551f3761E32ed22dd"],
+    "balance": 20608646,
+    "username": "ba3is"
+  },
+  "422333": {
+    "wallets": ["0xcD2797af670D8A2C55273fd212e46ec395d2b042"],
+    "balance": 39521758,
+    "username": "dalresin"
+  },
+  "428341": {
+    "wallets": ["0x60ba240114b825F676D11Cc178409Cc9c385171c"],
+    "balance": 383735,
+    "username": "onbloaded"
+  },
+  "428395": {
+    "wallets": ["0x3d26f21fAa27b736Dba14902a32Baae1A92879D1"],
+    "balance": 932782,
+    "username": "loyalmee"
+  },
+  "431233": {
+    "wallets": ["0x07Eed5f859B5c0375BCf3974A166682E69F401C5"],
+    "balance": 2159738,
+    "username": "klatuns"
+  },
+  "436463": {
+    "wallets": ["0x2e6356bA1BeB0028F08CDe70aE3FBF560e424b52"],
+    "balance": 3070595,
+    "username": "busymama"
+  },
+  "461936": {
+    "wallets": ["0x3B4e135839dbA4EA0c32267c88499cBAf3d92c7a"],
+    "balance": 833212,
+    "username": "topmanjt"
+  },
+  "477126": {
+    "wallets": ["0x64665F1C4A70fF223151fA447Cf081aA3C13C031"],
+    "balance": 5121053,
+    "username": "mikadoe.eth"
+  },
+  "480156": {
+    "wallets": ["0x3EC8DE0b499B5a170FbEDc1737dE01Ba582043D6"],
+    "balance": 1523353,
+    "username": "asake"
+  },
+  "495778": {
+    "wallets": ["0xfbe57093517deF9e357Ff37CB40047383fEC7690"],
+    "balance": 94403500,
+    "username": "giorg1"
+  },
+  "500326": {
+    "wallets": ["0x1254124D81de4f15DC08b004E77baBa0b164E0D9"],
+    "balance": 1160444,
+    "username": "hellopay"
+  },
+  "508806": {
+    "wallets": ["0xc0DF9dbD590C44Af29586DAc0ee292C2125a8C40"],
+    "balance": 427432,
+    "username": "abunana"
+  },
+  "510528": {
+    "wallets": ["0xD8fC413e6C66a6C66A5dC9364457756AaBd0BA1d"],
+    "balance": 285813,
+    "username": "ayoade26"
+  },
+  "511655": {
+    "wallets": ["0xaC7491Be41827E21e8a8A6581baBd1e7f60fa22f"],
+    "balance": 2000000,
+    "username": "bryhmo"
+  },
+  "516788": {
+    "wallets": ["0xaa4e1e3Be1e0A547430B50fB8b591ed9cCa341de"],
+    "balance": 11591950,
+    "username": "payamsoltani.eth"
+  },
+  "520418": {
+    "wallets": ["0xbac621AAe13f31656a3366e4fD846557D8E68F92"],
+    "balance": 264349,
+    "username": "ayomide2"
+  },
+  "526077": {
+    "wallets": ["0x956e5E77cB5FAA108E9354699c92237312696eCb"],
+    "balance": 7372979,
+    "username": "probnot"
+  },
+  "533971": {
+    "wallets": ["0x1C8a4206771604C362FD7aFA88893C48f831733d"],
+    "balance": 10860583,
+    "username": "avd002411"
+  },
+  "535199": {
+    "wallets": ["0x7347099dD27c5090bfF45eb1eB1bE44C7Ba05126"],
+    "balance": 231777,
+    "username": "frvnk"
+  },
+  "544047": {
+    "wallets": ["0xc29c609bF555e4fca64561d512E93B675d2c3e9E"],
+    "balance": 25296669,
+    "username": "pallohead.eth"
+  },
+  "549427": {
+    "wallets": ["0x29Ab02016Fd6a2c6fE199f8a2C28C1Dd8735dd81"],
+    "balance": 105529405,
+    "username": "!549427"
+  },
+  "563825": {
+    "wallets": ["0x1882b7edB831b976Dbc635b246b8b940082943b5"],
+    "balance": 83532050,
+    "username": "shangxi"
+  },
+  "568694": {
+    "wallets": ["0x8bB0E19062a8FEBbCc1060C18f0fD16997f196c8"],
+    "balance": 22403890,
+    "username": "burik"
+  },
+  "572666": {
+    "wallets": ["0x5450a98BD84B8E0708a2A3D55E6c048f15977CD1"],
+    "balance": 112100768,
+    "username": "blockwa.eth"
+  },
+  "600803": {
+    "wallets": ["0x027fC636dB3cEd7342581baED6eEE79f7d1123c3"],
+    "balance": 100000,
+    "username": "!600803"
+  },
+  "627353": {
+    "wallets": ["0x48F3DcDEEE76F5922c4adD6fcb99CdE2c3dfC8D3"],
+    "balance": 346510,
+    "username": "mnazma28"
+  },
+  "631749": {
+    "wallets": ["0x75aFAcAC743769c517726064722737d75BB501E4"],
+    "balance": 6513746,
+    "username": "ginyo"
+  },
+  "641762": {
+    "wallets": ["0x838eB07d7F2De4a86f43D55d2817702686852BA8"],
+    "balance": 137532281,
+    "username": "weeklyhackathon.eth"
+  },
+  "670639": {
+    "wallets": ["0x7BeC1f3285B83D273d640369282283B233e43786"],
+    "balance": 19928737,
+    "username": "thekris"
+  },
+  "689180": {
+    "wallets": ["0x7AaDBc0Db01d1D91D7B7116F247c9C32861bE717"],
+    "balance": 744883,
+    "username": "zaydecus"
+  },
+  "701197": {
+    "wallets": ["0xc2ef1173a4B051BbCc4474c407BBb2ac7E02e363"],
+    "balance": 20120543,
+    "username": "cryptoprofeta"
+  },
+  "781000": {
+    "wallets": ["0x36B9C0F1B17Eab8bABbF04917875E2Dc19F18Eea"],
+    "balance": 591596,
+    "username": "sinayavary"
+  },
+  "791687": {
+    "wallets": ["0xf72b7E17F62AEfe3f80e5F92c477F13ce22F9f41"],
+    "balance": 576535354,
+    "username": "thumb"
+  },
+  "817345": {
+    "wallets": ["0x25b9260DeeE6E96225fc84b1049A6Fb60A1Dcf92"],
+    "balance": 595585,
+    "username": "hugglemonster"
+  },
+  "853587": {
+    "wallets": ["0x598ca91D0C077cDb70506eac7323C7430F332b8E"],
+    "balance": 2905587,
+    "username": "maverisk.eth"
+  },
+  "870594": {
+    "wallets": [
+      "0x27a9b30DBe015842098F4CD31f0301a1cEE74bfe",
+      "0xC8013A8C09774eb2a008FdCbeDB5f640d1dbec00"
+    ],
+    "balance": 323870,
+    "username": "shomari.eth"
+  },
+  "875456": {
+    "wallets": ["0x82B92c2c01750a432c361394985b3f107b8dcec6"],
+    "balance": 925047,
+    "username": "notwyt"
+  },
+  "876184": {
+    "wallets": ["0x052D983F39881Faa021788B348650726671D8864"],
+    "balance": 657549,
+    "username": "moza12"
+  },
+  "885360": {
+    "wallets": ["0x28165971E4d592CA6C45A3786786Ec2f6b4b8D23"],
+    "balance": 40000000,
+    "username": "freezing"
+  },
+  "889352": {
+    "wallets": ["0xa084420ab19E9D71d215118146A7D82B39BE34D5"],
+    "balance": 125445316,
+    "username": "hiveking"
+  },
+  "892256": {
+    "wallets": ["0xC5De59BF13F7dFD5Ba1c208D7725371C11332C47"],
+    "balance": 3974799,
+    "username": "sammie0509"
+  },
+  "894095": {
+    "wallets": ["0x2724C40735AB32365fC3f06bA0097506a5d9ed44"],
+    "balance": 3200574,
+    "username": "kingace"
+  },
+  "901116": {
+    "wallets": ["0xEC9A2D08375273791E0fC837A9861d756e77Ba0B"],
+    "balance": 2867889,
+    "username": "x369"
+  },
+  "930091": {
+    "wallets": ["0xF9AD488Bd73fa12DDeEaE1636Ccf17cfFAb5933A"],
+    "balance": 6986221,
+    "username": "puberoni"
+  },
+  "930132": {
+    "wallets": ["0x9A50a6007C9dad348273e68b572F57c32da77EcE"],
+    "balance": 2562034,
+    "username": "kapitalflight"
+  }
+}

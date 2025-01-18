@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "MEKSans-Italic";
+  src: url("./assets/fonts/MEKSans-Italic.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MEKSans-Regular";
+  src: url("./assets/fonts/MEKSans-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
 :root {
   font-family: "IBM Plex Mono", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
@@ -85,4 +97,52 @@ button:focus-visible {
   src: url("./assets/fonts/MEKSans-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
+}
+
+.matrix-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+}
+.matrix-column {
+  position: absolute;
+  top: -20px;
+  animation: fall 20s infinite linear;
+  font-family: monospace;
+}
+.matrix-character {
+  display: block;
+  font-size: 20px;
+  animation: flicker 0.5s infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
