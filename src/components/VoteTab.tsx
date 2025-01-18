@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import {
   useAccount,
+  useBalance,
   useWaitForTransactionReceipt,
   useWriteContract,
 } from "wagmi";
@@ -9,9 +10,13 @@ import { sdk } from "@farcaster/frame-sdk";
 import axios from "axios";
 import weeklyHackathonWeekOneVoteAbi from "../lib/weeklyHackathonWeekOneVote.abi.json";
 import { HackathonFinalist, useFarcaster } from "./providers/FarcasterProvider";
+import { HACKATHON_TOKEN_CONTRACT_ADDRESS } from "./BuyHackathonButton";
 
 const WEEKLY_HACKATHON_WEEK_ONE_CONTRACT_ADDRESS =
   "0xb08806a1c22bf9c06dfa73296fb17a14d9cfc63b";
+
+const HACKATHON_TOKEN_CONTRACT_ADDRESS =
+  "0x3dF58A5737130FdC180D360dDd3EFBa34e5801cb";
 
 const reorder = (
   list: HackathonFinalist[],
@@ -104,6 +109,25 @@ const VoteTab = ({
     );
   };
 
+  const result = useBalance({
+    address,
+    token: HACKATHON_TOKEN_CONTRACT_ADDRESS, 
+  })
+
+  const formatBalance = (balance: number) => {
+    if (balance < 100000) {
+      return balance.toFixed(0);
+    } else if (balance < 1000000) {
+      return (balance / 1000).toFixed(1) + "K";
+    } else {
+      return (balance / 1000000).toFixed(1) + "M";
+    }
+  };
+
+  const formattedBalance = result?.data ? formatBalance(parseFloat(result.data.formatted)) : 0;
+
+  const enoughBalance = result.data ? parseFloat(result.data.formatted) > 88888 : false;
+
   const prepareVote = async () => {
     try {
       const preliminaryVote = finalists.map((finalist) => finalist.id).join("");
@@ -168,14 +192,18 @@ const VoteTab = ({
   }
 
   return (
-    <div className="w-full h-full p-2 bg-[#0A0A0A]">
+    <div className="w-full h-full p-2 bg-[#0A0A0A] flex flex-col gap-4">
+      <div className="text-[#2DFF05] p-3 bg-[#2DFF0510] rounded-lg">
+        Your $hackathon balance: {formattedBalance} {enoughBalance ? "✅" : "⚠"}
+      </div>
+
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="finalists">
           {(provided) => (
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
-              className="h-full overflow-y-auto space-y-2 scrollbar-thin scrollbar-thumb-[#2DFF05] scrollbar-track-[#1A1A1A] pr-2"
+              className="h-full overflow-y-auto space-y-2 scrollbar-thin scrollbar-thumb-[#2DFF05] scrollbar-track-[#1A1A1A]"
             >
               {finalists.map((finalist, index) => (
                 <Draggable
